@@ -3,6 +3,8 @@ services:
   service1:
     build:
       context: ./service1
+    container_name: samundra-service1-container
+    image: samundra-service1-image
     volumes:
       - ./logs:/logs
     depends_on:
@@ -13,6 +15,8 @@ services:
   service2:
     build:
       context: ./service2
+    container_name: samundra-service2-container
+    image: samundra-service2-image
     volumes:
       - ./logs:/logs
     networks:
